@@ -1,0 +1,20 @@
+# This is a comment — lines starting with # are ignored
+
+# Specify owners for the entire repository
+*       @team-leads @project-manager
+
+# Owners for specific directories
+/docs/  @docs-team
+/src/   @backend-dev @frontend-dev
+
+# Owners for specific file types
+*.js    @frontend-dev
+*.java  @backend-dev
+
+# Owners for a specific file
+README.md  @tech-writer
+
+# Multiple owners can be listed (any of them can approve)
+config.yml  @devops @admin
+
+# You can also us
