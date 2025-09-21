@@ -14,7 +14,7 @@ pipeline {
                 echo 'Building the project...'
                  // Example: compile or build step
                  // sh 'javac Main.java'
-             }
+             } 
          }
  
          stage('Test') {
@@ -22,7 +22,7 @@ pipeline {
                 echo 'Running tests...'
                  // Example:sh 'python3 -m unittest test/'
              }
-         }
+         } 
         stage('Deploy') {
              steps {
                 echo 'Deploying the application...'
