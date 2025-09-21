@@ -1,33 +1,36 @@
 pipeline {
-     agent any
- 
-     stages {
-         stage('Checkout') {
-             steps {
-                 echo 'Cloning repository...'
-                 checkout scm
-             }
-         }
- 
-         stage('Build') {
-             steps {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Cloning repository...'
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
                 echo 'Building the project...'
-                 // Example: compile or build step
-                 // sh 'javac Main.java'
-             }
-         }
- 
-         stage('Test') {
-             steps {
+                // Example: compile or build step
+                // sh 'javac Main.java'
+            }
+        }
+
+        stage('Test') {
+            steps {
                 echo 'Running tests...'
-                 // Example:sh 'python3 -m unittest test/'
-             }
-         }
+                // Example:
+                // sh 'python3 -m unittest test/'
+            }
+        }
+
         stage('Deploy') {
-             steps {
+            steps {
                 echo 'Deploying the application...'
-                //Example:sh target/app.jar user@server:/deployments/'
-             }
-         }
-     }
- }
+                // Example:
+                // sh 'scp target/app.jar user@server:/deployments/'
+            }
+        }
+    }
+}
